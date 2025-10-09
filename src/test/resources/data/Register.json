@@ -1,0 +1,82 @@
+{
+  "successful": [
+    {
+      "firstName": "neww",
+      "lastName": "dda",
+      "email": "RANDOM_EMAIL",
+      "password": "P@ssword1",
+      "confirmPassword": "P@ssword1"
+    }
+  ],
+
+  "firstNameIsMissing": [
+    {
+      "lastName": "dda",
+      "email": "RANDOM_EMAIL",
+      "password": "P@ssword1",
+      "confirmPassword": "P@ssword1"
+    }
+  ],
+
+  "lastNameIsMissing": [
+    {
+      "firstName": "neww",
+      "email": "RANDOM_EMAIL",
+      "password": "P@ssword1",
+      "confirmPassword": "P@ssword1"
+    }
+  ],
+
+  "emailIsMissing": [
+    {
+      "firstName": "neww",
+      "lastName": "dda",
+      "password": "P@ssword1",
+      "confirmPassword": "P@ssword1"
+    }
+  ],
+
+  "passwordIsMissing": [
+    {
+      "firstName": "neww",
+      "lastName": "dda",
+      "email": "RANDOM_EMAIL"
+    }
+  ],
+
+  "passwordTooShort": [
+    {
+      "firstName": "neww",
+      "lastName": "dda",
+      "email": "RANDOM_EMAIL",
+      "password": "abc",
+      "confirmPassword": "abc"
+    },
+    {
+      "firstName": "neww",
+      "lastName": "dda",
+      "email": "RANDOM_EMAIL",
+      "password": "12345",
+      "confirmPassword": "12345"
+    }
+  ],
+
+  "confirmPasswordIsMissing": [
+    {
+      "firstName": "neww",
+      "lastName": "dda",
+      "email": "RANDOM_EMAIL",
+      "password": "P@ssword1"
+    }
+  ],
+
+  "confirmPasswordNotMatching": [
+    {
+      "firstName": "neww",
+      "lastName": "dda",
+      "email": "RANDOM_EMAIL",
+      "password": "P@ssword1",
+      "confirmPassword": "abc"
+    }
+  ]
+}

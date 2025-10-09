@@ -4,19 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f43a989d-4a89-492c-847d-a894e5f9932e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+    <list default="true" id="f43a989d-4a89-492c-847d-a894e5f9932e" name="Changes" comment="dfds">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/annotations/JsonData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/BrowserDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/ChromeDriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/DriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/EdgeDriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/FirefoxDriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/managers/PageObjectManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/RegisterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/RegisterData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/utils/ExtentReportManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/utils/RandomDataUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/globaldata.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/base/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/listeners/TestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/provider/JsonDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/RegisterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/RetryMechanism.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/ScreenshotUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/Register.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,19 +50,104 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="33gVv9EGIaciKTUXrEF108P6Z7q" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterTest.testSuccessfulRegistration.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.codeium.AppSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.webshop.demo.pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mdsah\IdeaProjects\WebShop_Ecommerce\TestSuite" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.myorg.demo.factory" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml">
+    <configuration name="C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/TestSuite/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.webshop.demo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.RegisterTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTest.testSuccessfulRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.webshop.demo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.RegisterTest" />
+      <option name="METHOD_NAME" value="testSuccessfulRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml" />
+        <item itemvalue="TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml" />
+        <item itemvalue="TestNG.RegisterTest" />
+        <item itemvalue="TestNG.RegisterTest.testSuccessfulRegistration" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,6 +157,14 @@
       <option name="presentableId" value="Default" />
       <updated>1759738932484</updated>
     </task>
+    <task id="LOCAL-00001" summary="dfds">
+      <created>1759740614223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759740614223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -58,5 +177,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dfds" />
+    <option name="LAST_COMMIT_MESSAGE" value="dfds" />
   </component>
 </project>
