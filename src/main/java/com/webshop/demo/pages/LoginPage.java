@@ -10,10 +10,10 @@ public class LoginPage extends BasePage {
     @FindBy(css = ".page-title h1")
     private WebElement loginPageTitle;
 
-    @FindBy(id = "email")
+    @FindBy(id = "Email")
     private WebElement emailField;
 
-    @FindBy(id = "password")
+    @FindBy(id = "Password")
     private WebElement passwordField;
 
     @FindBy(id = "RememberMe")
@@ -24,6 +24,20 @@ public class LoginPage extends BasePage {
 
     @FindBy(css = ".login-button")
     private WebElement loginButton;
+
+    @FindBy(css =".validation-summary-errors")
+    private WebElement blankEmailValidationError;
+
+    @FindBy(css =".validation-summary-errors")
+    private WebElement blankPasswordValidationError;
+
+    @FindBy(css = "span[for='Email']")
+    private WebElement emailValidationError;
+
+    @FindBy(css = ".validation-summary-errors")
+    private WebElement correctEmailInvalidPasswordValidationError;
+
+
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -67,6 +81,48 @@ public class LoginPage extends BasePage {
     public HomePage clickLoginButton(){
         click(loginButton);
         return new HomePage(driver);
+    }
+
+    public void PasswordFieldEmpty(){
+        type(passwordField, "");
+    }
+
+    //Error Validations
+
+    public boolean isBlankEmailValidationErrorVisible(){
+        return isDisplayed(blankEmailValidationError);
+    }
+
+    public String getBlankEmailValidationError(){
+        return getText(blankEmailValidationError);
+    }
+
+    public boolean isBlankPasswordValidationErrorVisible(){
+        return isDisplayed(blankPasswordValidationError);
+    }
+
+    public String getBlankPasswordValidationError(){
+        return getText(blankPasswordValidationError);
+    }
+
+    public boolean isEmailValidationErrorVisible(){
+        return isDisplayed(emailValidationError);
+    }
+
+    public String getEmailValidationError(){
+        return getText(emailValidationError);
+    }
+
+    public boolean isCorrectEmailInvalidPasswordValidationErrorVisible(){
+        return isDisplayed(correctEmailInvalidPasswordValidationError);
+    }
+
+    public String getCorrectEmailInvalidPasswordValidationError(){
+        return getText(correctEmailInvalidPasswordValidationError);
+    }
+
+    public boolean isPasswordFieldEmpty(){
+        return isDisplayed(passwordField);
     }
 
 

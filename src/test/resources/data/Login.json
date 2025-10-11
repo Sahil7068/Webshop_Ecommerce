@@ -1,0 +1,105 @@
+{
+  "blankEmail": [
+    {
+      "email": "",
+      "password": "test123"
+    }
+  ],
+
+
+  "blankPassword": [
+    {
+      "email": "random@example.com"
+    }
+  ],
+
+  "correctEmailInvalidPassword": [
+    {
+      "password": "test123"
+    }
+  ],
+
+
+  "invalidEmails": [
+    {
+      "email": "plainaddress",
+      "description": "Missing @ sign and domain"
+    },
+    {
+      "email": "@missingusername.com",
+      "description": "Missing username"
+    },
+    {
+      "email": "username@.com",
+      "description": "Missing domain"
+    },
+    {
+      "email": ".username@example.com",
+      "description": "Leading dot in address"
+    },
+    {
+      "email": "username@example..com",
+      "description": "Multiple dots in domain"
+    },
+    {
+      "email": "username@.example.com",
+      "description": "Leading dot in domain"
+    },
+    {
+      "email": "username@-example.com",
+      "description": "Leading hyphen in domain"
+    },
+    {
+      "email": "username@example.com.",
+      "description": "Trailing dot in domain"
+    },
+    {
+      "email": "username@example,com",
+      "description": "Comma instead of dot"
+    },
+    {
+      "email": "user name@example.com",
+      "description": "Space in username"
+    },
+    {
+      "email": "username@exa mple.com",
+      "description": "Space in domain"
+    },
+    {
+      "email": "username@.com",
+      "description": "Only domain"
+    },
+    {
+      "email": "username@-example.com",
+      "description": "Hyphen at start of domain"
+    },
+    {
+      "email": "username@example-.com",
+      "description": "Hyphen at end of domain"
+    },
+    {
+      "email": "username@111.222.333.44444",
+      "description": "Invalid IP format"
+    },
+    {
+      "email": "username@example",
+      "description": "Missing top-level domain"
+    },
+    {
+      "email": "username@.com.",
+      "description": "Trailing dot"
+    },
+    {
+      "email": "username@.com.",
+      "description": "Multiple trailing dots"
+    },
+    {
+      "email": "username@-example.com",
+      "description": "Leading hyphen in domain part"
+    },
+    {
+      "email": "username@example..com",
+      "description": "Multiple consecutive dots in domain"
+    }
+  ]
+}

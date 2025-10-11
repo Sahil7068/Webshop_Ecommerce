@@ -78,30 +78,6 @@ public class JsonDataProvider {
 
 
 
-
-//    private static Object[][] readJsonArray(String filePath) throws IOException {
-//        List<Object> data = mapper.readValue(new File(filePath), new TypeReference<List<Object>>() {});
-//        return data.stream()
-//                .map(item -> new Object[]{item})
-//                .toArray(Object[][]::new);
-//    }
-//
-//    private static <T> Object[][] readJsonMap(String filePath, String key, Class<T> targetClass) throws IOException {
-//        Map<String, List<Map<String, Object>>> dataMap = mapper.readValue(
-//                new File(filePath),
-//                new TypeReference<Map<String, List<Map<String, Object>>>>() {}
-//        );
-//
-//        List<Map<String, Object>> testData = dataMap.get(key);
-//        if (testData == null) {
-//            throw new IllegalArgumentException("No test data found for key: " + key);
-//        }
-//
-//        return testData.stream()
-//                .map(item -> new Object[]{mapper.convertValue(item, targetClass)})
-//                .toArray(Object[][]::new);
-//    }
-
     /**
      * Simple placeholder injector:
      * - Looks for getEmail()/setEmail(String) on the POJO and if email equals "RANDOM_EMAIL" (case-insensitive),

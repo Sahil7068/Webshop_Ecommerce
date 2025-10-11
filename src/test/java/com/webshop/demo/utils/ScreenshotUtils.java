@@ -77,4 +77,17 @@ public class ScreenshotUtils {
             }
         }
     }
+
+    public String getScreenshotAsBase64() {
+        if (this.driver == null) {
+            System.err.println("WebDriver is not initialized. Cannot take screenshot.");
+            return "";
+        }
+        try {
+            return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+        } catch (Exception e) {
+            System.err.println("Failed to capture screenshot: " + e.getMessage());
+            return "";
+        }
+    }
 }

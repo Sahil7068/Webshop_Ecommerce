@@ -2,9 +2,15 @@ package com.webshop.demo.base;
 
 import com.webshop.demo.factory.DriverFactory;
 import com.webshop.demo.managers.PageObjectManager;
+import com.webshop.demo.pages.HomePage;
+import com.webshop.demo.pages.LoginPage;
+import com.webshop.demo.pages.RegisterPage;
+import com.webshop.demo.pojo.RegisterData;
+import com.webshop.demo.utils.TestDataHolder;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,6 +20,17 @@ import java.util.Properties;
 public class BaseTest {
     protected WebDriver driver;
     protected PageObjectManager pages;
+    protected SoftAssert softAssert;
+    private RegisterData testUser;
+
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+    
+    public PageObjectManager getPages() {
+        return pages;
+    }
 
     private static final Duration PAGE_LOAD_TIMEOUT = Duration.ofSeconds(30);
     private static final ThreadLocal<WebDriver> THREAD_DRIVER = new ThreadLocal<>();
@@ -60,6 +77,7 @@ public class BaseTest {
         }
         driver.get(appUrl);
         pages = new PageObjectManager(driver);
+        softAssert = new SoftAssert();
 
     }
 
@@ -68,7 +86,36 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown(){
+        softAssert.assertAll();
         driver.quit();
+    }
+
+    protected void registerAndLogin(){
+        // 1. Create test data
+        testUser = new RegisterData(
+                "Test",
+                "User",
+                "testuser" + System.currentTimeMillis() + "@example.com",
+                "Test@123",
+                "Test@123"
+        );
+
+        // 2. Register new user
+        RegisterPage registerPage = pages.getRegisterPage().goToRegister();
+        registerPage.enterFirstName(testUser.getFirstName())
+                .enterLastName(testUser.getLastName())
+                .enterEmail(testUser.getEmail())
+                .enterPassword(testUser.getPassword())
+                .enterConfirmPassword(testUser.getConfirmPassword())
+                .clickRegisterButton();
+        HomePage homePage = registerPage.clickAfterRegistrationContinueButton();
+        homePage.goToLogout();
+
+        // 3. Login with the new user
+        LoginPage loginPage = pages.getLoginPage().goToLogin();
+        homePage = loginPage.enterEmail(testUser.getEmail())
+                .enterPassword(testUser.getPassword())
+                .clickLoginButton();
     }
 }
 

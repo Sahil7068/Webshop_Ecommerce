@@ -1,0 +1,14 @@
+{
+  "addProductToCart": [
+    {
+      "productName": "14.1-inch Laptop"
+    }
+  ],
+
+  "searchItem": [
+    {
+      "typedProductName": "computer",
+      "selectedItem": "Simple Computer"
+    }
+  ]
+}

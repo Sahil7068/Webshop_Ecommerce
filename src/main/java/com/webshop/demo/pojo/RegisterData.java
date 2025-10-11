@@ -7,6 +7,20 @@ public class RegisterData {
     private String password;
     private String confirmPassword;
 
+    // Default constructor (required for JSON deserialization)
+    public RegisterData() {
+    }
+
+    // Parameterized constructor
+    public RegisterData(String firstName, String lastName, String email,
+                        String password, String confirmPassword) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
+
     public String getFirstName() {
         return firstName;
     }

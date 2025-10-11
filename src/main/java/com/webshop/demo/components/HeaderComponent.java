@@ -43,6 +43,9 @@ public class HeaderComponent extends BasePage {
     @FindBy(css = "input.search-box-button")
     private WebElement searchButton;
 
+    @FindBy(xpath = "//a[@class='ico-logout']//..//..//a[@class='account']")
+    private WebElement myAccountLink;
+
 
     public HeaderComponent(WebDriver driver) {
         super(driver);
@@ -67,6 +70,18 @@ public class HeaderComponent extends BasePage {
 
     public boolean isLogoutLinkVisible() {
         return logoutLink.isDisplayed();
+    }
+
+    public boolean isMyAccountVisible() {
+        return myAccountLink.isDisplayed();
+    }
+
+    public String getMyAccountText() {
+        return getText(myAccountLink);
+    }
+
+    public void goToAccountPage() {
+        click(myAccountLink);
     }
 
     public void openCart() {
@@ -123,6 +138,8 @@ public class HeaderComponent extends BasePage {
         type(searchInput, query);
         submitSearch();
     }
+
+
 
 
 

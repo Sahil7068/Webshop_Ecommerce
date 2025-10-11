@@ -53,6 +53,10 @@ public abstract class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    protected void waitForElementToApperar(By FindBy){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(FindBy));
+    }
+
     protected void waitForInvisibility(WebElement element) {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }

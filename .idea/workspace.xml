@@ -5,31 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f43a989d-4a89-492c-847d-a894e5f9932e" name="Changes" comment="dfds">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/annotations/JsonData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/BrowserDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/ChromeDriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/DriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/EdgeDriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/factory/FirefoxDriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/managers/PageObjectManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/RegisterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/RegisterData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/utils/ExtentReportManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/utils/RandomDataUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/globaldata.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/base/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/listeners/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/provider/JsonDataProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/RegisterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/RetryMechanism.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/ScreenshotUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/Register.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/AccountPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/ShoppingCartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/WishlistPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/HomePageData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/LoginData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/RegistrationFlow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/HomePageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/HomePage.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/Login.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/RegisterData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/RegisterData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/provider/JsonDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/provider/JsonDataProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/ScreenshotUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +42,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SahilR9/WebShop_Ecommerce.git",
+    "accountId": "b7c8a399-495a-497f-ab95-584fbe9443ce"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -58,20 +59,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RegisterTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.RegisterTest.testSuccessfulRegistration.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.codeium.AppSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml.executor": "Run",
+    "TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml.executor": "Run",
+    "TestNG.HomePageTest (1).executor": "Run",
+    "TestNG.HomePageTest (2).executor": "Run",
+    "TestNG.HomePageTest (3).executor": "Run",
+    "TestNG.HomePageTest (4).executor": "Run",
+    "TestNG.HomePageTest.executor": "Run",
+    "TestNG.HomePageTest.testAddProductToCart.executor": "Run",
+    "TestNG.HomePageTest.testSearchButtonWithNoSearchText.executor": "Run",
+    "TestNG.HomePageTest.testSearchFunctionality.executor": "Run",
+    "TestNG.LoginTest.executor": "Run",
+    "TestNG.LoginTest.testSuccessfulLoginWithRegisteredCredentials.executor": "Run",
+    "TestNG.RegisterTest.executor": "Run",
+    "TestNG.RegisterTest.testSuccessfulRegistration.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "com.codeium.AppSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.webshop.demo.pages" />
@@ -83,28 +94,8 @@
       <recent name="com.myorg.demo.factory" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml">
-    <configuration name="C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WebShop_Ecommerce" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/TestSuite/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WebShop_Ecommerce" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.HomePageTest.testSearchButtonWithNoSearchText">
+    <configuration name="HomePageTest (3)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WebShop_Ecommerce" />
       <extension name="coverage">
         <pattern>
@@ -113,7 +104,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.RegisterTest" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -121,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterTest.testSuccessfulRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="HomePageTest (4)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WebShop_Ecommerce" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +121,60 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.RegisterTest" />
-      <option name="METHOD_NAME" value="testSuccessfulRegistration" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.webshop.demo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest.testSearchButtonWithNoSearchText" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.webshop.demo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
+      <option name="METHOD_NAME" value="testSearchButtonWithNoSearchText" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest.testSearchFunctionality" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.webshop.demo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
+      <option name="METHOD_NAME" value="testSearchFunctionality" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -141,10 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml" />
-        <item itemvalue="TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml" />
-        <item itemvalue="TestNG.RegisterTest" />
-        <item itemvalue="TestNG.RegisterTest.testSuccessfulRegistration" />
+        <item itemvalue="TestNG.HomePageTest.testSearchButtonWithNoSearchText" />
+        <item itemvalue="TestNG.HomePageTest" />
+        <item itemvalue="TestNG.HomePageTest (4)" />
+        <item itemvalue="TestNG.HomePageTest (3)" />
+        <item itemvalue="TestNG.HomePageTest.testSearchFunctionality" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759740614223</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dfds">
+      <option name="closed" value="true" />
+      <created>1760027116881</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760027116881</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
