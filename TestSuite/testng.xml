@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WebShop Test Suite" parallel="tests" thread-count="1" verbose="1">
+    
+    <listeners>
+        <listener class-name="com.webshop.demo.listeners.TestListener"/>
+    </listeners>
+
+    <!-- 1. Run All Tests (Regression) -->
+    <test name="Full Regression Suite" enabled="false">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.webshop.demo.tests.RegisterTest"/>
+            <class name="com.webshop.demo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- 2. Run Only Registration Tests -->
+    <test name="Registration Tests Only" enabled="false">
+        <groups>
+            <run>
+                <include name="registration"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.webshop.demo.tests.RegisterTest"/>
+        </classes>
+    </test>
+
+    <!-- 3. Run Only Negative Registration Tests -->
+    <test name="Negative Registration Tests" enabled="false">
+        <groups>
+            <run>
+                <include name="negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.webshop.demo.tests.RegisterTest"/>
+        </classes>
+    </test>
+
+    <!-- 4. Run Only Login Test -->
+    <test name="Login Test Only" enabled="false">
+        <groups>
+            <run>
+                <include name="login"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.webshop.demo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- 5. Quick Flow: Successful Registration + Login -->
+    <test name="Quick Registration-Login Flow">
+        <groups>
+            <run>
+                <include name="registeredEmail"/>
+
+            </run>
+        </groups>
+        <classes>
+            <class name="com.webshop.demo.tests.RegisterTest"/>
+            <class name="com.webshop.demo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+
+
+    <!-- 6. Run Negative Login Test -->
+    <test name="Negative Login Test" enabled="false">
+        <groups>
+            <run>
+                <include name="negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.webshop.demo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+
+</suite>
