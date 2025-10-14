@@ -20,6 +20,9 @@ public class HomePage extends BasePage {
     @FindBy(css = ".ajax-loading-block-window .loading-image")
     private WebElement loadingImage;
 
+    @FindBy(css = ".close")
+    private WebElement closeToast;
+
     @FindBy(css = ".content")
     private WebElement productAddedToast;
 
@@ -70,13 +73,15 @@ public class HomePage extends BasePage {
         return products;
     }
 
+
     public WebElement getProductNames(String productName) {
         waitForElementToApperar(productList);
-
-
-        return getProductList().stream().filter(s -> s.findElement(By.cssSelector("h2.product-title a"))
-                        .getText().trim().equalsIgnoreCase(productName)).
-                findFirst().orElse(null);
+        
+        return getProductList().stream()
+                .filter(s -> s.findElement(By.cssSelector("h2.product-title a"))
+                        .getText().trim().equalsIgnoreCase(productName))
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException("Product not found: " + productName));
     }
 
     public void addProductToCart(String productName) {
@@ -89,6 +94,10 @@ public class HomePage extends BasePage {
 
     public void waitForLoadingImageToDisappear() {
         waitForInvisibility(loadingImage);
+    }
+
+    public void closeToast(){
+        click(closeToast);
     }
 
     public boolean isProductAddedToastVisible() {

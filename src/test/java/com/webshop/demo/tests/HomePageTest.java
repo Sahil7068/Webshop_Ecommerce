@@ -2,6 +2,8 @@ package com.webshop.demo.tests;
 
 import com.webshop.demo.annotations.JsonData;
 import com.webshop.demo.base.BaseTest;
+import com.webshop.demo.flows.HomePageFlow;
+import com.webshop.demo.flows.LoginFlow;
 import com.webshop.demo.flows.RegistrationFlow;
 import com.webshop.demo.pages.HomePage;
 import com.webshop.demo.pages.LoginPage;
@@ -19,8 +21,8 @@ public class HomePageTest extends BaseTest {
 
     @BeforeMethod
     public void setUp(){
-        RegistrationFlow registrationFlow = new RegistrationFlow(pages);
-        HomePage homePage = registrationFlow.ensureUserIsLoggedIn();
+        LoginFlow loginFlow = new LoginFlow(pages);
+        HomePage homePage = loginFlow.registerAndLogin();
 
     }
 
@@ -39,8 +41,7 @@ public class HomePageTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1,
-    enabled = false)
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1)
     @JsonData(file = "HomePage.json", key = "addProductToCart", targetClass = HomePageData.class)
     public void testAddProductToCart(HomePageData homePageData) {
         HomePage homePage =navigateToHomePageAndVerifyTitle();
@@ -52,8 +53,7 @@ public class HomePageTest extends BaseTest {
                 "The product has been added to your shopping cart");
     }
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 2,
-            enabled = false)
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 2)
     @JsonData(file = "HomePage.json", key = "searchItem", targetClass = HomePageData.class)
     public void testSearchFunctionality(HomePageData homePageData) {
         HomePage homePage =navigateToHomePageAndVerifyTitle();

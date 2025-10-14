@@ -32,8 +32,7 @@ public class RegistrationFlow {
     }
 
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class)
-    @JsonData(file = "Register.json", key = "successful", targetClass = RegisterData.class)
+    @Test
     public HomePage registerNewUser() {
         RegisterData user = getCurrentUser();
         RegisterPage registerPage = pages.getRegisterPage().goToRegister();
@@ -44,17 +43,11 @@ public class RegistrationFlow {
                 .enterConfirmPassword(user.getConfirmPassword())
                 .clickRegisterButton();
 
-        registerPage.clickAfterRegistrationContinueButton();
-        pages.getHomePage().goToLogout();
+        return registerPage.clickAfterRegistrationContinueButton();
 
-
-        return pages.getLoginPage().goToLogin()
-                .enterEmail(user.getEmail())
-                .enterPassword(user.getPassword())
-                .clickLoginButton();
     }
 
-    public HomePage ensureUserIsLoggedIn() {
+    public HomePage ensureUserIsRegistered() {
         return  registerNewUser();
     }
 

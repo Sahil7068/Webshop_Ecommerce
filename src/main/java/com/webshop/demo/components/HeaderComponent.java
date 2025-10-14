@@ -19,7 +19,7 @@ public class HeaderComponent extends BasePage {
     @FindBy(css = "a.ico-logout")
     private WebElement logoutLink;
 
-    @FindBy(id = "topcartlink")
+    @FindBy(xpath = "//input[@value='Search']//..//..//..//a//span[text()='Shopping cart']")
     private WebElement topCartLink; // anchor wrapper for cart
 
     @FindBy(css = "a.ico-cart .cart-qty")

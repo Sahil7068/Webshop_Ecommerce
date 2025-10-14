@@ -4,27 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f43a989d-4a89-492c-847d-a894e5f9932e" name="Changes" comment="dfds">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/AccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/ShoppingCartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/WishlistPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/HomePageData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/LoginData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/RegistrationFlow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/HomePageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/HomePage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/Login.json" afterDir="false" />
+    <list default="true" id="f43a989d-4a89-492c-847d-a894e5f9932e" name="Changes" comment="webshop">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/CheckoutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/ShoppingCartData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/HomePageFlow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/LoginFlow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/ShoppingCartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/ShoppingCart.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/managers/PageObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/managers/PageObjectManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/RegisterData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/RegisterData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/listeners/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/provider/JsonDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/provider/JsonDataProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/RegisterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/utils/ScreenshotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/ShoppingCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/RegistrationFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/RegistrationFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/HomePageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/SahilR9/WebShop_Ecommerce.git",
-    "accountId": "b7c8a399-495a-497f-ab95-584fbe9443ce"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SahilR9&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sahil7068/Webshop_Ecommerce.git&quot;,
+    &quot;accountId&quot;: &quot;b7c8a399-495a-497f-ab95-584fbe9443ce&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,6 +62,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml.executor": "Run",
     "TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml.executor": "Run",
@@ -78,6 +78,10 @@
     "TestNG.LoginTest.testSuccessfulLoginWithRegisteredCredentials.executor": "Run",
     "TestNG.RegisterTest.executor": "Run",
     "TestNG.RegisterTest.testSuccessfulRegistration.executor": "Run",
+    "TestNG.ShoppingCartTest (1).executor": "Run",
+    "TestNG.ShoppingCartTest (2).executor": "Run",
+    "TestNG.ShoppingCartTest.executor": "Run",
+    "TestNG.ShoppingCartTest.verifyProductAndCheckout.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "com.codeium.AppSettingsConfigurable"
@@ -94,41 +98,7 @@
       <recent name="com.myorg.demo.factory" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageTest.testSearchButtonWithNoSearchText">
-    <configuration name="HomePageTest (3)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WebShop_Ecommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.webshop.demo.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageTest (4)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WebShop_Ecommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.webshop.demo.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.ShoppingCartTest.verifyProductAndCheckout">
     <configuration name="HomePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WebShop_Ecommerce" />
       <extension name="coverage">
@@ -146,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest.testSearchButtonWithNoSearchText" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WebShop_Ecommerce" />
       <extension name="coverage">
         <pattern>
@@ -155,16 +125,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
-      <option name="METHOD_NAME" value="testSearchButtonWithNoSearchText" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.ShoppingCartTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomePageTest.testSearchFunctionality" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ShoppingCartTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WebShop_Ecommerce" />
       <extension name="coverage">
         <pattern>
@@ -173,8 +142,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.HomePageTest" />
-      <option name="METHOD_NAME" value="testSearchFunctionality" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.ShoppingCartTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.webshop.demo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.ShoppingCartTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingCartTest.verifyProductAndCheckout" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebShop_Ecommerce" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.webshop.demo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.webshop.demo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.webshop.demo.tests.ShoppingCartTest" />
+      <option name="METHOD_NAME" value="verifyProductAndCheckout" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -184,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.HomePageTest.testSearchButtonWithNoSearchText" />
+        <item itemvalue="TestNG.ShoppingCartTest.verifyProductAndCheckout" />
+        <item itemvalue="TestNG.ShoppingCartTest (2)" />
+        <item itemvalue="TestNG.ShoppingCartTest" />
+        <item itemvalue="TestNG.ShoppingCartTest (1)" />
         <item itemvalue="TestNG.HomePageTest" />
-        <item itemvalue="TestNG.HomePageTest (4)" />
-        <item itemvalue="TestNG.HomePageTest (3)" />
-        <item itemvalue="TestNG.HomePageTest.testSearchFunctionality" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +219,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760027116881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="webshop">
+      <option name="closed" value="true" />
+      <created>1760202005630</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760202005630</updated>
+    </task>
+    <task id="LOCAL-00004" summary="webshop">
+      <option name="closed" value="true" />
+      <created>1760202075542</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760202075542</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +251,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dfds" />
-    <option name="LAST_COMMIT_MESSAGE" value="dfds" />
+    <MESSAGE value="webshop" />
+    <option name="LAST_COMMIT_MESSAGE" value="webshop" />
   </component>
 </project>
