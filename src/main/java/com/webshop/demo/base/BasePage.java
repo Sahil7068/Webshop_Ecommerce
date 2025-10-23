@@ -85,6 +85,12 @@ public abstract class BasePage {
         element.click();
     }
 
+    protected void click(By locator) {
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        click(element); // reuse the WebElement click method above
+    }
+
+
     protected void jsClick(WebElement element) {
         js.executeScript("arguments[0].click();", element);
     }

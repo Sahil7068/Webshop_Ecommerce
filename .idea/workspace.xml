@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f43a989d-4a89-492c-847d-a894e5f9932e" name="Changes" comment="webshop">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pojo/ShoppingCartData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/HomePageFlow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/LoginFlow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/ShoppingCartTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/ShoppingCart.json" afterDir="false" />
+    <list default="true" id="f43a989d-4a89-492c-847d-a894e5f9932e" name="Changes" comment="Shopping">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/CheckOutTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/CheckoutPage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/components/HeaderComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/base/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/managers/PageObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/managers/PageObjectManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/ShoppingCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webshop/demo/pages/CheckoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/RegistrationFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/flows/RegistrationFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/HomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/webshop/demo/tests/HomePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/ShoppingCart.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/ShoppingCart.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -58,35 +54,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml.executor": "Run",
-    "TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml.executor": "Run",
-    "TestNG.HomePageTest (1).executor": "Run",
-    "TestNG.HomePageTest (2).executor": "Run",
-    "TestNG.HomePageTest (3).executor": "Run",
-    "TestNG.HomePageTest (4).executor": "Run",
-    "TestNG.HomePageTest.executor": "Run",
-    "TestNG.HomePageTest.testAddProductToCart.executor": "Run",
-    "TestNG.HomePageTest.testSearchButtonWithNoSearchText.executor": "Run",
-    "TestNG.HomePageTest.testSearchFunctionality.executor": "Run",
-    "TestNG.LoginTest.executor": "Run",
-    "TestNG.LoginTest.testSuccessfulLoginWithRegisteredCredentials.executor": "Run",
-    "TestNG.RegisterTest.executor": "Run",
-    "TestNG.RegisterTest.testSuccessfulRegistration.executor": "Run",
-    "TestNG.ShoppingCartTest (1).executor": "Run",
-    "TestNG.ShoppingCartTest (2).executor": "Run",
-    "TestNG.ShoppingCartTest.executor": "Run",
-    "TestNG.ShoppingCartTest.verifyProductAndCheckout.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "com.codeium.AppSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/TestSuite/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/mdsah/IdeaProjects/WebShop_Ecommerce/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest (3).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest (4).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.testAddProductToCart.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.testSearchButtonWithNoSearchText.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageTest.testSearchFunctionality.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testSuccessfulLoginWithRegisteredCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegisterTest.testSuccessfulRegistration.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ShoppingCartTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ShoppingCartTest (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ShoppingCartTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ShoppingCartTest.verifyProductAndCheckout.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.codeium.AppSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.webshop.demo.pages" />
@@ -235,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760202075542</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Shopping">
+      <option name="closed" value="true" />
+      <created>1760421754341</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760421754341</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +256,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dfds" />
     <MESSAGE value="webshop" />
-    <option name="LAST_COMMIT_MESSAGE" value="webshop" />
+    <MESSAGE value="Shopping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shopping" />
   </component>
 </project>

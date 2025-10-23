@@ -51,7 +51,7 @@ public class RegistrationFlow {
         return  registerNewUser();
     }
 
-//    public void logout() {
-//        pages.getHomePage().goToLogout();
-//    }
+    public void logout() {
+        pages.getHomePage().goToLogout();
+    }
 }
