@@ -36,7 +36,7 @@ public class LoginTest extends BaseTest {
         return loginPage;
     }
     
-    @Test(groups = {"positive"})
+    @Test(groups = {"positive", "smoke"})
     public void testSuccessfulLoginWithRegisteredCredentials() {
         // Navigate to login page
         LoginPage loginPage = navigateToLoginPageAndVerifyTitle();
@@ -71,7 +71,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
-            priority = 2, groups = {"negative"})
+             groups = {"negative", "smoke"})
     @JsonData(file = "Login.json", key = "correctEmailInvalidPassword", targetClass = LoginData.class)
     public void testWithRegisteredEmailAndIncorrectPassword(LoginData loginData) {
 
@@ -100,8 +100,8 @@ public class LoginTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 3,
-            groups = {"negative"})
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
+            groups = {"negative", "regression"})
     @JsonData(file = "Login.json", key = "blankEmail", targetClass = LoginData.class)
     public void testLoginWithBlankEmail(LoginData loginData) {
 
@@ -121,7 +121,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
-            priority = 4, groups = {"negative"})
+            groups = {"negative", "regression"})
     @JsonData(file = "Login.json", key = "blankPassword", targetClass = LoginData.class)
     public void testLoginWithBlankPassword(LoginData loginData) {
 
@@ -142,7 +142,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
-            priority = 5, groups = {"negative"})
+     groups = {"negative", "regression"})
     @JsonData(file = "Login.json", key = "invalidEmails", targetClass = LoginData.class)
     public void testLoginWithInvalidEmails(LoginData loginData) {
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WebShop Test Suite" parallel="tests" thread-count="1" verbose="1">
+    
+    <listeners>
+        <listener class-name="com.webshop.demo.listeners.TestListener"/>
+    </listeners>
+
+    <!-- 1. Run All Tests (smoke) -->
+    <test name="Full smoke Suite">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.webshop.demo.tests.RegisterTest"/>
+            <class name="com.webshop.demo.tests.LoginTest"/>
+            <class name="com.webshop.demo.tests.HomePageTest"/>
+            <class name="com.webshop.demo.tests.CheckOutTest"/>
+            <class name="com.webshop.demo.tests.ShoppingCartTest"/>
+        </classes>
+    </test>
+
+
+
+
+</suite>

@@ -41,8 +41,7 @@ public class CheckOutTest extends BaseTest {
         return checkoutPage;
     }
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1
-    ,groups = {"positive"})
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, groups = {"positive", "smoke"})
     @JsonData(file = "CheckoutPage.json", key = "CODCheckout", targetClass = CheckoutData.class)
     public void verifyProductAndCheckoutUsingCOD(CheckoutData checkoutData){
         checkoutPage = navigateToCheckoutPageAndVerifyTitle();

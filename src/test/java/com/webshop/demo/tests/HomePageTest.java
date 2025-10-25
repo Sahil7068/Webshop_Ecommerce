@@ -41,7 +41,7 @@ public class HomePageTest extends BaseTest {
 
 
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1, groups = {"positive"})
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, groups = {"positive", "smoke"})
     @JsonData(file = "HomePage.json", key = "addProductToCart", targetClass = HomePageData.class)
     public void testAddProductToCart(HomePageData homePageData) {
         HomePage homePage =navigateToHomePageAndVerifyTitle();
@@ -53,10 +53,10 @@ public class HomePageTest extends BaseTest {
                 "The product has been added to your shopping cart");
     }
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 2,
-    groups = {"positive"})
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
+    groups = {"positive", "regression"})
     @JsonData(file = "HomePage.json", key = "searchItem", targetClass = HomePageData.class)
-    public void testSearchFunctionality(HomePageData homePageData) {
+    public void verifySearchFunctionality(HomePageData homePageData) {
         HomePage homePage =navigateToHomePageAndVerifyTitle();
 
         homePage.enterSearchText(homePageData.getTypedProductName());
@@ -75,7 +75,7 @@ public class HomePageTest extends BaseTest {
 
     }
 
-    @Test(priority = 3, groups = {"negative"})
+    @Test(groups = {"negative", "regression"})
     public void testSearchButtonWithNoSearchText() {
         HomePage homePage = navigateToHomePageAndVerifyTitle();
         homePage.clickSearchButtonWithNoSearchText();

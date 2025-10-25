@@ -39,8 +39,8 @@ public class ShoppingCartTest extends BaseTest {
     }
 
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1,
-    groups = {"positive"})
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
+    groups = {"positive", "smoke"})
     @JsonData(file = "ShoppingCart.json", key = "successfulCheckout", targetClass = ShoppingCartData.class)
     public void verifyProductAndCheckout(ShoppingCartData shoppingCartData){
         ShoppingCartPage shoppingCartPage = navigateToShoppingCartAndVerifyTitle();
