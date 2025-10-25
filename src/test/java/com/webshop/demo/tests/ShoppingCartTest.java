@@ -15,14 +15,18 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+import java.util.Properties;
+
 public class ShoppingCartTest extends BaseTest {
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() throws IOException {
+        Properties prop = loadProperties();
         LoginFlow loginFlow = new LoginFlow(pages);
         HomePage homePage = loginFlow.registerAndLogin();
         HomePageFlow homePageFlow = new HomePageFlow(pages);
-        homePageFlow.addProductToCart("14.1-inch Laptop");
+        homePageFlow.addProductToCart(prop.getProperty("productName"));
     }
 
     private ShoppingCartPage navigateToShoppingCartAndVerifyTitle() {
@@ -35,7 +39,8 @@ public class ShoppingCartTest extends BaseTest {
     }
 
 
-    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1)
+    @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1,
+    groups = {"positive"})
     @JsonData(file = "ShoppingCart.json", key = "successfulCheckout", targetClass = ShoppingCartData.class)
     public void verifyProductAndCheckout(ShoppingCartData shoppingCartData){
         ShoppingCartPage shoppingCartPage = navigateToShoppingCartAndVerifyTitle();
@@ -43,6 +48,7 @@ public class ShoppingCartTest extends BaseTest {
         Assert.assertTrue(productInCart, "Product not found in cart");
 
         shoppingCartPage.setSelectCountry(shoppingCartData.getCountry())
+                .waitForStateToLoad()
                 .setSelectState(shoppingCartData.getState())
                 .setAddZipCode(shoppingCartData.getZipCode())
                 .clickEstimateShippingButton()

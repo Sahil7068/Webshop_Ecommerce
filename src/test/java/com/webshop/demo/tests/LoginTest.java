@@ -2,21 +2,30 @@ package com.webshop.demo.tests;
 
 import com.webshop.demo.annotations.JsonData;
 import com.webshop.demo.base.BaseTest;
+import com.webshop.demo.flows.RegistrationFlow;
 import com.webshop.demo.pages.HomePage;
 import com.webshop.demo.pages.LoginPage;
 import com.webshop.demo.pages.RegisterPage;
 import com.webshop.demo.pojo.LoginData;
 import com.webshop.demo.pojo.RegisterData;
 import com.webshop.demo.provider.JsonDataProvider;
-import com.webshop.demo.utils.TestDataHolder;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
  * Test class for login functionality
- * This test depends on RegisterTest.testSuccessfulRegistration
  */
 public class LoginTest extends BaseTest {
+    private RegisterData testUser;
+
+    @BeforeMethod
+    public void setUp() {
+        RegistrationFlow registrationFlow = new RegistrationFlow(pages);
+        registrationFlow.ensureUserIsRegistered();
+        testUser = registrationFlow.getCurrentUser();
+        registrationFlow.logout();
+    }
 
     private LoginPage navigateToLoginPageAndVerifyTitle() {
         LoginPage loginPage = pages.getLoginPage().goToLogin();
@@ -27,22 +36,18 @@ public class LoginTest extends BaseTest {
         return loginPage;
     }
     
-    @Test(priority = 1, groups = {"regression", "login", "registeredEmail"}, dependsOnMethods = "testSuccessfulRegistration") // Higher priority to run after registration
+    @Test(groups = {"positive"})
     public void testSuccessfulLoginWithRegisteredCredentials() {
-        // Get stored credentials from registration test
-        String email = TestDataHolder.getUserEmail();
-        String password = TestDataHolder.getUserPassword();
-
-        
         // Navigate to login page
         LoginPage loginPage = navigateToLoginPageAndVerifyTitle();
         
-        // Perform login
+        // Perform login using credentials from registration flow
         HomePage homePage = loginPage
-                .enterEmail(email)
-                .enterPassword(password)
+                .enterEmail(testUser.getEmail())
+                .enterPassword(testUser.getPassword())
                 .clickLoginButton();
 
+        // Verify successful login
         String homePageTitle = homePage.getHomePageTitle();
         Assert.assertEquals(homePageTitle, "Demo Web Shop",
                 "Home Page Title doesn't match");
@@ -51,7 +56,7 @@ public class LoginTest extends BaseTest {
                 "Account email should be visible after login");
 
         String accountEmailVerification = homePage.getAccountEmail();
-        Assert.assertEquals(accountEmailVerification, email,
+        Assert.assertEquals(accountEmailVerification, testUser.getEmail(),
                 "Account email doesn't match");
 
 
@@ -66,13 +71,12 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
-            priority = 2, groups = {"regression", "negative", "login", "registeredEmail"}, dependsOnMethods = "testSuccessfulRegistration")
+            priority = 2, groups = {"negative"})
     @JsonData(file = "Login.json", key = "correctEmailInvalidPassword", targetClass = LoginData.class)
     public void testWithRegisteredEmailAndIncorrectPassword(LoginData loginData) {
-        String email = TestDataHolder.getUserEmail();
 
         LoginPage loginPage = navigateToLoginPageAndVerifyTitle();
-        loginPage.enterEmail(email);
+        loginPage.enterEmail(testUser.getEmail());
         loginPage.enterPassword(loginData.getPassword());
         loginPage.clickLoginButton();
 
@@ -97,7 +101,7 @@ public class LoginTest extends BaseTest {
 
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 3,
-            groups = {"negative", "login"})
+            groups = {"negative"})
     @JsonData(file = "Login.json", key = "blankEmail", targetClass = LoginData.class)
     public void testLoginWithBlankEmail(LoginData loginData) {
 
@@ -117,7 +121,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
-            priority = 4, groups = {"negative", "login"})
+            priority = 4, groups = {"negative"})
     @JsonData(file = "Login.json", key = "blankPassword", targetClass = LoginData.class)
     public void testLoginWithBlankPassword(LoginData loginData) {
 
@@ -138,7 +142,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class,
-            priority = 5, groups = {"negative", "login"})
+            priority = 5, groups = {"negative"})
     @JsonData(file = "Login.json", key = "invalidEmails", targetClass = LoginData.class)
     public void testLoginWithInvalidEmails(LoginData loginData) {
 

@@ -81,14 +81,19 @@ public class HomePage extends BasePage {
                 .filter(s -> s.findElement(By.cssSelector("h2.product-title a"))
                         .getText().trim().equalsIgnoreCase(productName))
                 .findFirst()
-                .orElseThrow(() -> new NoSuchElementException("Product not found: " + productName));
+                .orElse(null);
     }
 
     public void addProductToCart(String productName) {
         WebElement product = getProductNames(productName);
-        waitForClickability(addToCartElement);
+        if (product == null) {
+            throw new NoSuchElementException("Product not found: " + productName);
+        }
+        else {
+            waitForClickability(addToCartElement);
 
-        product.findElement(addToCart).click();
+            product.findElement(addToCart).click();
+        }
 
     }
 

@@ -1,0 +1,22 @@
+{
+  "CODCheckout": [
+    {
+      "companyName" : "Kafka",
+      "country" : "United States",
+      "state" : "Alaska",
+      "city" : "LA",
+      "address1" : "city,456",
+      "zipPostalCode" : "434343",
+      "phoneNumber" : "1234567890",
+      "billingHeader" : "Billing address",
+      "shippingAddressHeader" : "Shipping address",
+      "paymentMethodHeader" : "Payment method",
+      "paymentMethod": "Cash On Delivery (COD) (7.00)",
+      "paymentInformationHeader" : "Payment information",
+      "codInformationText" : "You will pay by COD",
+      "confirmOrderHeader" : "Confirm order",
+      "confirmOrderText" : "Your order has been successfully processed!"
+
+    }
+  ]
+}

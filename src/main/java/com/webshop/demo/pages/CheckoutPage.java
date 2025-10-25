@@ -13,6 +13,30 @@ public class CheckoutPage extends BasePage {
     @FindBy(css = ".step-title h2")
     private List<WebElement> checkoutHeaders;
 
+    @FindBy(css = "input[id=BillingNewAddress_Company]")
+    private WebElement companyNameInput;
+
+    @FindBy(css = "select[name='BillingNewAddress.CountryId']")
+    private WebElement selectCountry;
+
+    @FindBy(css = "span[id='states-loading-progress']")
+    private WebElement waitAfterSelectCountry;
+
+    @FindBy(css = "select[id='BillingNewAddress_StateProvinceId']")
+    private WebElement selectState;
+
+    @FindBy(css = "input[id='BillingNewAddress_City']")
+    private WebElement cityInput;
+
+    @FindBy(css = "input[id='BillingNewAddress_Address1']")
+    private WebElement addressInput;
+
+    @FindBy(css = "input[id='BillingNewAddress_ZipPostalCode']")
+    private WebElement zipPostalCodeInput;
+
+    @FindBy(css = "input[id='BillingNewAddress_PhoneNumber']")
+    private WebElement phoneNumberInput;
+
     @FindBy(css = "select[id='billing-address-select']")
     private WebElement selectBillingAddress;
 
@@ -39,6 +63,9 @@ public class CheckoutPage extends BasePage {
 
     @FindBy(xpath = "//input[@onclick='PaymentMethod.save()']")
     private WebElement paymentMethodContinue;
+
+    @FindBy(xpath = "//input[@onclick='PaymentMethod.save()']/following-sibling::span")
+    private WebElement waitAfterPaymentMethodContinue;
 
     @FindBy(xpath = "//p[contains(normalize-space(), 'You will pay by COD')]")
     private WebElement paymentMethodCODText;
@@ -74,6 +101,7 @@ public class CheckoutPage extends BasePage {
     private WebElement getCardCode;
 
 
+
     @FindBy(css = "input[onclick='ConfirmOrder.save()']")
     private WebElement confirmOrder;
 
@@ -104,7 +132,47 @@ public class CheckoutPage extends BasePage {
     public boolean isBillingHeaderPresent(String billingHeaderText) {
         return checkoutHeaders.stream()
                 .map(WebElement::getText)
-                .anyMatch(headerText -> headerText.trim().equals(billingHeaderText));
+                .anyMatch(headerText -> headerText.trim().equalsIgnoreCase(billingHeaderText));
+    }
+
+    public CheckoutPage enterCompanyName(String companyName){
+        type(companyNameInput, companyName);
+        return this;
+    }
+
+    public CheckoutPage selectCountry(String country){
+        selectByVisibleText(selectCountry, country);
+        return this;
+    }
+
+    public CheckoutPage waitAfterSelectCountry(){
+        waitForInvisibility(waitAfterSelectCountry);
+        return this;
+    }
+
+    public CheckoutPage selectState(String state){
+        selectByVisibleText(selectState, state);
+        return this;
+    }
+
+    public CheckoutPage enterCity(String city){
+        type(cityInput, city);
+        return this;
+    }
+
+    public CheckoutPage enterAddress(String address){
+        type(addressInput, address);
+        return this;
+    }
+
+    public CheckoutPage enterZipPostalCode(String zipPostalCode){
+        type(zipPostalCodeInput, zipPostalCode);
+        return this;
+    }
+
+    public CheckoutPage enterPhoneNumber(String phoneNumber){
+        type(phoneNumberInput, phoneNumber);
+        return this;
     }
 
     public CheckoutPage clickBillingContinue(){
@@ -117,10 +185,10 @@ public class CheckoutPage extends BasePage {
         return this;
     }
 
-    public boolean isShippingHeaderPresent(String shippingHeaderText) {
+    public boolean isShippingAddressHeaderPresent(String shippingAddressHeaderText) {
         return checkoutHeaders.stream()
                 .map(WebElement::getText)
-                .anyMatch(headerText -> headerText.trim().equals(shippingHeaderText));
+                .anyMatch(headerText -> headerText.trim().equalsIgnoreCase(shippingAddressHeaderText));
     }
 
     public CheckoutPage togglePickUpInStore(){
@@ -147,7 +215,7 @@ public class CheckoutPage extends BasePage {
     public boolean isPaymentHeaderPresent(String paymentHeaderText) {
         return checkoutHeaders.stream()
                 .map(WebElement::getText)
-                .anyMatch(headerText -> headerText.trim().equals(paymentHeaderText));
+                .anyMatch(headerText -> headerText.trim().equalsIgnoreCase(paymentHeaderText));
     }
 
     public CheckoutPage clickPaymentMethod(String methodName){
@@ -161,21 +229,36 @@ public class CheckoutPage extends BasePage {
         return this;
     }
 
+    public CheckoutPage waitAfterPaymentMethodContinue(){
+        waitForInvisibility(waitAfterPaymentMethodContinue);
+        return this;
+    }
+
     public CheckoutPage clickBackPayment(){
         click(paymentBack);
         return this;
     }
 
-    public CheckoutPage waitAfterPaymentContinue(){
+    public CheckoutPage clickPaymentInfoContinue(){
+        click(paymentInfoContinue);
+        return this;
+    }
+
+    public CheckoutPage waitAfterPaymentInfoContinue(){
         waitForInvisibility(waitAfterPaymentInfoContinue);
         return this;
+    }
+
+    public boolean isPaymentInformationHeaderPresent(String paymentInformationHeaderText) {
+        return checkoutHeaders.stream()
+                .map(WebElement::getText)
+                .anyMatch(headerText -> headerText.trim().equalsIgnoreCase(paymentInformationHeaderText));
     }
 
     public  String getPaymentInfoCOD(String CODPaymentText) {
 
         if(getCODPaymentText.getText().equalsIgnoreCase(CODPaymentText)){
-            click(paymentInfoContinue);
-            waitForInvisibility(waitAfterPaymentInfoContinue);
+
             return getCODPaymentText.getText();
         }
 
@@ -195,10 +278,11 @@ public class CheckoutPage extends BasePage {
     public boolean isConfirmOrderHeaderPresent(String confirmHeaderText) {
         return checkoutHeaders.stream()
                 .map(WebElement::getText)
-                .anyMatch(headerText -> headerText.trim().equals(confirmHeaderText));
+                .anyMatch(headerText -> headerText.trim().equalsIgnoreCase(confirmHeaderText));
     }
 
     public CheckoutPage clickConfirmOrder(){
+        scrollToElement(confirmOrder);
         click(confirmOrder);
         return this;
     }

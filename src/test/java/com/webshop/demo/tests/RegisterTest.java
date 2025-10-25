@@ -6,11 +6,9 @@ import com.webshop.demo.pages.HomePage;
 import com.webshop.demo.pages.RegisterPage;
 import com.webshop.demo.pojo.RegisterData;
 import com.webshop.demo.provider.JsonDataProvider;
-import com.webshop.demo.utils.TestDataHolder;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static com.webshop.demo.utils.TestDataHolder.setUserEmail;
 
 public class RegisterTest extends BaseTest {
 
@@ -25,14 +23,10 @@ public class RegisterTest extends BaseTest {
 
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 1
-            , groups = {"successfulRegistration", "registration", "regression", "registeredEmail"})
+            , groups = {"positive"})
     @JsonData(file = "Register.json", key = "successful", targetClass = RegisterData.class)
     public void testSuccessfulRegistration(RegisterData registerData) {
-        // Store registration data for use in other tests
-        TestDataHolder.setUserEmail(registerData.getEmail());
-        TestDataHolder.setUserPassword(registerData.getPassword());
-        TestDataHolder.setFirstName(registerData.getFirstName());
-        TestDataHolder.setLastName(registerData.getLastName());
+
 
         RegisterPage registerPage = navigateToRegisterAndVerifyTitle();
 
@@ -67,7 +61,7 @@ public class RegisterTest extends BaseTest {
 
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 2,
-    groups = {"regression", "negative"})
+    groups = {"negative"})
     @JsonData(file = "Register.json", key = "firstNameIsMissing", targetClass = RegisterData.class)
     public void verifyRegistrationFails_WhenFirstNameIsMissing(RegisterData registerData) {
 
@@ -92,7 +86,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 3,
-    groups = {"regression", "negative"})
+    groups = {"negative"})
     @JsonData(file = "Register.json", key = "lastNameIsMissing", targetClass = RegisterData.class)
     public void verifyRegistrationFails_WhenLastNameIsMissing(RegisterData registerData) {
 
@@ -117,7 +111,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 4,
-    groups = {"regression", "negative"})
+    groups = {"negative"})
     @JsonData(file = "Register.json", key = "emailIsMissing", targetClass = RegisterData.class)
     public void verifyRegistrationFails_WhenEmailIsMissing(RegisterData registerData) {
 
@@ -142,7 +136,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 5,
-    groups = {"regression", "negative"})
+    groups = {"negative"})
     @JsonData(file = "Register.json", key = "passwordIsMissing", targetClass = RegisterData.class)
     public void verifyRegistrationFails_WhenPasswordIsMissing(RegisterData registerData) {
 
@@ -166,7 +160,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 6,
-    groups = {"regression", "negative"})
+    groups = {"negative"})
     @JsonData(file = "Register.json", key = "passwordTooShort", targetClass = RegisterData.class)
     public void verifyRegistrationFails_WhenPasswordTooShort(RegisterData registerData) {
 
@@ -191,7 +185,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 7,
-    groups = {"regression", "negative"})
+    groups = {"negative"})
     @JsonData(file = "Register.json", key = "confirmPasswordIsMissing", targetClass = RegisterData.class)
     public void verifyRegistrationFails_WhenConfirmPasswordIsMissing(RegisterData registerData) {
 
@@ -216,7 +210,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(dataProvider = "jsonProvider", dataProviderClass = JsonDataProvider.class, priority = 8,
-    groups = {"regression", "negative"})
+    groups = {"negative"})
     @JsonData(file = "Register.json", key = "confirmPasswordNotMatching", targetClass = RegisterData.class)
     public void verifyRegistrationFails_WhenConfirmPasswordNotMatching(RegisterData registerData) {
 

@@ -24,6 +24,9 @@ public class ShoppingCartPage extends BasePage {
     @FindBy(css = ".zip-input")
     private WebElement addZipCode;
 
+    @FindBy(css = "span[id='estimate-shipping-loading-progress']")
+    private WebElement loadingProgress;
+
     @FindBy(css = ".estimate-shipping-button")
     private WebElement estimateShippingButton;
 
@@ -58,6 +61,12 @@ public class ShoppingCartPage extends BasePage {
     public ShoppingCartPage setSelectCountry(String country){
         selectByVisibleText(selectCountry, country);
         return this;
+    }
+
+    public ShoppingCartPage waitForStateToLoad(){
+        waitForInvisibility(loadingProgress);
+        return this;
+
     }
 
     public ShoppingCartPage setSelectState(String state){

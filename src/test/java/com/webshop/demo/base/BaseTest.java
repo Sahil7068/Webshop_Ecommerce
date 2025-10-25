@@ -6,7 +6,6 @@ import com.webshop.demo.pages.HomePage;
 import com.webshop.demo.pages.LoginPage;
 import com.webshop.demo.pages.RegisterPage;
 import com.webshop.demo.pojo.RegisterData;
-import com.webshop.demo.utils.TestDataHolder;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -35,7 +34,7 @@ public class BaseTest {
     private static final Duration PAGE_LOAD_TIMEOUT = Duration.ofSeconds(30);
     private static final ThreadLocal<WebDriver> THREAD_DRIVER = new ThreadLocal<>();
 
-    private Properties loadProperties() throws IOException {
+    protected Properties loadProperties() throws IOException {
         Properties prop = new Properties();
         String configPath = System.getProperty("user.dir") + "\\src\\main\\resources\\globaldata.properties";
         try (FileInputStream fis = new FileInputStream(configPath)) {
