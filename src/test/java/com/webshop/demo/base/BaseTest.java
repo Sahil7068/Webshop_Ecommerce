@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
-public class BaseTest {
+public abstract class BaseTest {
     protected WebDriver driver;
     protected PageObjectManager pages;
     protected SoftAssert softAssert;
